@@ -1,0 +1,11 @@
+<link rel = "stylesheet" href = "app.css">
+
+<h1>Welcome to the Post Feeds</h1>
+
+<ul>
+	<% posts.forEach(function(item){ %>
+ 		<li><%= item.title %> - <%= item.author %></li> 
+	<% }); %>
+</ul>
+
+<p>P.S. This is the feed.ejs file</p>
