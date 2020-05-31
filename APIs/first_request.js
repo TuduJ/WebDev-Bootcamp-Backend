@@ -1,8 +1,10 @@
-var request = require('request');
+const request = require('request');
 
-request('https://samples.openweathermap.org/data/2.5/weather?zip=94040,us&appid=439d4b804bc8187953eb36d2a8c26a02', function(error, response, body){
+request('https://jsonplaceholder.typicode.com/users/1', function(error, response, body){
+	// eval(require('locus'));
 	if(!error && response.statusCode == 200){
-		var parseData = JSON.parse(body);
-		console.log(parseData["sys"]["sunset"]);
+		const parseData = JSON.parse(body);
+		// console.log(parseData.name + ' lives in ' + parseData.address.city);
+		console.log(`${parseData.name}  lives in  ${parseData.address.city}`);	// This line of code performs the same action as the above code does.
 	}
 });
