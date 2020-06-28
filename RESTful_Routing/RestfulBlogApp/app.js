@@ -46,6 +46,8 @@ var Blog = mongoose.model("Blog", blogSchema);
 
 // RESTFUL Routes
 
+
+// INDEX ROUTE
 app.get("/", function(req, res){
 	res.redirect("/blogs");
 });
@@ -60,6 +62,12 @@ app.get("/blogs", function(req, res){
 		}
 	})
 	
+});
+
+
+// NEW ROUTE
+app.get("/blogs/new", function(req, res){
+	res.render("new");
 });
 
 
