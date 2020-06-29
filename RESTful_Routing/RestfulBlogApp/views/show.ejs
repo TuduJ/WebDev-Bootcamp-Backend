@@ -12,9 +12,23 @@
 			<div class="descrition">
 				<p><%=blog.body%></p>
 			</div>
-			<a class="ui orange basic button" href="/blogs/<%=blog._id%>/edit">Edit</a>
+			<a class="ui orange basic button animated" href="/blogs/<%=blog._id%>/edit">
+				<div class="visible content">
+					Edit
+				</div>
+				<div class="hidden content">
+					<i class="right edit icon"></i>
+				</div>
+			</a>
 			<form id="delete" action="/blogs/<%=blog._id%>?_method=DELETE" method="POST">
-				<button class="ui red basic button">Delete</button>
+				<button class="ui red basic button animated">
+					<div class="visible content">
+						Delete
+					</div>
+					<div class="hidden content">
+						<i class="right icon trash alternate outline"></i>
+					</div>
+				</button>
 			</form>
 		</div>
 	</div>
