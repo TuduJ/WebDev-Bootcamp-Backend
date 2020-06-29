@@ -1,5 +1,8 @@
 var mongoose = require("mongoose");
 
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useUnifiedTopology', true);
+
 // USER - email, name
 var userSchema = new mongoose.Schema({
 	email: String,
@@ -12,4 +15,4 @@ var userSchema = new mongoose.Schema({
 	]
 });
 
-module.export = mongoose.model("User", userSchema);
+module.exports = mongoose.model("User", userSchema);

@@ -1,5 +1,8 @@
 var mongoose = require("mongoose");
 
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useUnifiedTopology', true);
+
 
 // POST - title, content
 var postSchema = new mongoose.Schema({
@@ -7,4 +10,4 @@ var postSchema = new mongoose.Schema({
 	content: String
 });
 
-module.export = mongoose.model("Post", postSchema);
+module.exports = mongoose.model("Post", postSchema);

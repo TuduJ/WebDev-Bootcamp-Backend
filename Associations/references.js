@@ -18,26 +18,26 @@ var User = require("./models/user");
 // });
 
 
-// // Create a posts
-// Post.create({
-// 	title: "Sample post 1",
-// 	content: "Sample content 1"
-// }, function(err, post){
-// 	User.findOne({email: "t.jason@edu"}, function(err, foundUser){
-// 		if(err){
-// 			console.log(err);
-// 		}else{
-// 			foundUser.posts.push(post);
-// 			foundUser.save(function(err, data){
-// 				if(err){
-// 					console.log(err);
-// 				}else{
-// 					console.log(data);
-// 				}
-// 			});
-// 		}
-// 	});
-// });
+// Create a posts
+Post.create({
+	title: "Sample post 3",
+	content: "Sample content 3"
+}, function(err, post){
+	User.findOne({email: "t.jason@edu"}, function(err, foundUser){
+		if(err){
+			console.log(err);
+		}else{
+			foundUser.posts.push(post);
+			foundUser.save(function(err, data){
+				if(err){
+					console.log(err);
+				}else{
+					console.log(data);
+				}
+			});
+		}
+	});
+});
 
 
 
